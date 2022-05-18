@@ -23,30 +23,30 @@
 <body>
 <!-- menu bar -->
 
-  <header class="text-gray-600 body-font bg-gradient-to-t from-blue-50 to-sky-50 sticky top-0 z-20 ">
-    <div class="px-14 flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img class="w-10 h-auto" src="./img/logo.svg" alt="">
-        <span class="ml-3 text-xl">Restorica</span>
+<header class="text-gray-600 body-font bg-gradient-to-t from-blue-50 to-sky-50 sticky top-0 z-50 ">
+  <div class="px-14 flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img class="w-10 h-auto" src="{% static './img/logo.svg' %}" alt="">
+      <span class="ml-3 text-xl">Restorica</span>
+    </a>
+    <nav class="md:ml-auto md:mr-auto flex flex-col md:flex-row items-center font-normal justify-center">
+      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer active:text-red-400" href="{% url 'index' %}">Home</a>
+      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="aboutus.html">About Us</a>
+      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="{% url 'menu' %}">Menu</a>
+      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="{% url 'table' %}">Table Book</a>
+    </nav>
+    <div class="flex flex-col md:flex-row justify-center items-center">
+      <a href="{% url 'login' %}" class="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 border-0 py-1 px-3 focus:outline-none hover:from-red-500 hover:to-pink-500 rounded-lg shadow-cla-pink text-base mt-4 md:mt-0 ">Login
+        <i class="fa-solid fa-user-astronaut ml-3"></i>
       </a>
-      <nav class="md:ml-auto md:mr-auto flex flex-col md:flex-row items-center font-normal justify-center">
-        <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer active:text-red-400" href="./index.html">Home</a>
-        <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="aboutus.html">About Us</a>
-        <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="./menu.html">Menu</a>
-        <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="tablebook.html">Table Book</a>
-      </nav>
-      <div class="flex flex-col md:flex-row justify-center items-center">
-        <a href="login.html" class="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 border-0 py-1 px-3 focus:outline-none hover:from-red-500 hover:to-pink-500 rounded-lg shadow-cla-pink text-base mt-4 md:mt-0 ">Login
-          <i class="fa-solid fa-user-astronaut ml-3"></i>
-        </a>
-        <span class="relative ml-3 mt-8 md:mt-0 cursor-pointer">
-            <img class="w-8 h-auto" src="./img/cart.svg" alt="">
-          <p class="absolute -top-4 -right-4 bg-green-400 rounded-full w-5 h-5 flex justify-center items-center text-sm">2</p>
-        </span>
-      </div>
-    
+      <span class="relative ml-3 mt-8 md:mt-0 cursor-pointer">
+       <img class="w-8 h-auto" src="{% static './img/cart.svg' %}" alt="">
+        <p class="absolute -top-4 -right-4 bg-green-400 rounded-full w-5 h-5 flex justify-center items-center text-sm">2</p>
+      </span>
     </div>
-  </header>
+  
+  </div>
+</header>
 
 <!-- hero section -->
   
@@ -62,7 +62,7 @@
       </button>
     </div>
     <div class="lg:w-1/2 md:w-1/2 w-full p-5 md:p-0 md:pl-10 flex flex-col md:items-center md:text-left">
-      <img class="object-cover object-center w-[85%]" src="./img/table-hero.svg" alt="hero" />
+      <img class="object-cover object-center w-[85%]" src="{% static './img/table-hero.svg' %}" alt="hero" />
     </div>
   </div>
 </section>
@@ -81,7 +81,7 @@
         <p class="text-2xl mb-2  underline font-medium ml-10">Couple Table</p>
         <div class="flex space-x-7">
      
-          <img class="w-56 h-auto rounded-lg" src="./img/table-1.jpg" alt="">
+          <img class="w-56 h-auto rounded-lg" src="{% static './img/table-1.jpg' %}" alt="">
          <div class="block ">
           <div class="flex flex-col">
             <span class=" font-normal text-xl">Total Table</span>
@@ -109,7 +109,7 @@
         
           
          <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-amber-300 to-amber-400 border-0 py-1 px-1 focus:outline-none hover:from-blue-500 hover:to-green-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-          <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+          <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
         </a>
        
       
@@ -120,7 +120,7 @@
         <p class="text-2xl mb-2  underline font-medium ml-10">Single Table</p>
         <div class="flex space-x-7">
      
-          <img class="w-56 h-auto rounded-lg" src="./img/table-2.png" alt="">
+          <img class="w-56 h-auto rounded-lg" src="{% static './img/table-2.png' %}" alt="">
          <div class="block ">
           <div class="flex flex-col">
             <span class=" font-normal text-xl">Total Table</span>
@@ -148,7 +148,7 @@
         
           
          <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-green-300 to-teal-400 border-0 py-1 px-1 focus:outline-none hover:from-yellow-500 hover:to-amber-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-          <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+          <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
         </a>
        
       
@@ -164,7 +164,7 @@
       <p class="text-2xl mb-2  underline font-medium ml-10">Corporate Table</p>
       <div class="flex space-x-7">
    
-        <img class="w-56 h-auto rounded-lg" src="./img/table-3.jpg" alt="">
+        <img class="w-56 h-auto rounded-lg" src="{% static './img/table-3.jpg' %}" alt="">
        <div class="block ">
         <div class="flex flex-col">
           <span class=" font-normal text-xl">Total Table</span>
@@ -192,7 +192,7 @@
       
         
        <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-purple-400 to-violet-400 border-2 py-1 px-1 focus:outline-none hover:from-blue-500 hover:to-green-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-        <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+        <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
       </a>
      
     
@@ -203,7 +203,7 @@
       <p class="text-2xl mb-2  underline font-medium ml-10">Family Table</p>
       <div class="flex space-x-7">
    
-        <img class="w-56 h-auto rounded-lg" src="./img/table-4.jpg" alt="">
+        <img class="w-56 h-auto rounded-lg" src="{% static './img/table-4.jpg' %}" alt="">
        <div class="block ">
         <div class="flex flex-col">
           <span class=" font-normal text-xl">Total Table</span>
@@ -231,7 +231,7 @@
       
         
        <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-orange-300 to-orange-400 border-0 py-1 px-1 focus:outline-none hover:from-yellow-500 hover:to-amber-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-        <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+        <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
       </a>
      
     
@@ -247,7 +247,7 @@
     <p class="text-2xl mb-2  underline font-medium ml-10">Friends Table</p>
     <div class="flex space-x-7">
  
-      <img class="w-56 h-auto rounded-lg" src="./img/table-5.svg" alt="">
+      <img class="w-56 h-auto rounded-lg" src="{% static './img/table-5.svg' %}" alt="">
      <div class="block ">
       <div class="flex flex-col">
         <span class=" font-normal text-xl">Total Table</span>
@@ -275,7 +275,7 @@
     
       
      <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-cyan-400 to-violet-400 border-2 py-1 px-1 focus:outline-none hover:from-amber-500 hover:to-orange-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-      <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+      <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
     </a>
    
   
@@ -286,7 +286,7 @@
     <p class="text-2xl mb-2  underline font-medium ml-10">Normal Table</p>
     <div class="flex space-x-7">
  
-      <img class="w-56 h-auto rounded-lg" src="./img/table-6.svg" alt="">
+      <img class="w-56 h-auto rounded-lg" src="{% static './img/table-6.svg' %}" alt="">
      <div class="block ">
       <div class="flex flex-col">
         <span class=" font-normal text-xl">Total Table</span>
@@ -314,7 +314,7 @@
     
       
      <a href="selecttable.html" class="w-36 flex justify-center items-center ml-10 mt-5 bg-gradient-to-r from-red-300 to-red-400 border-0 py-1 px-1 focus:outline-none hover:from-yellow-500 hover:to-amber-500 rounded-lg shadow-cla-pink text-base  drop-shadow-lg cursor-pointer">Book Table
-      <img class="w-8 h-8" src="./img/icons/book.svg" alt="">
+      <img class="w-8 h-8" src="{% static './img/icons/book.svg' %}" alt="">
     </a>
    
   

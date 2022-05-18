@@ -33,10 +33,10 @@
       <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer active:text-red-400" href="{% url 'index' %}">Home</a>
       <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="aboutus.html">About Us</a>
       <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="{% url 'menu' %}">Menu</a>
-      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="">Table Book</a>
+      <a class="mr-9 hover:text-red-900 hover:font-semibold font-josefin cursor-pointer" href="{% url 'table' %}">Table Book</a>
     </nav>
     <div class="flex flex-col md:flex-row justify-center items-center">
-      <a href="login.html" class="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 border-0 py-1 px-3 focus:outline-none hover:from-red-500 hover:to-pink-500 rounded-lg shadow-cla-pink text-base mt-4 md:mt-0 ">Login
+      <a href="{% url 'login' %}" class="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-500 border-0 py-1 px-3 focus:outline-none hover:from-red-500 hover:to-pink-500 rounded-lg shadow-cla-pink text-base mt-4 md:mt-0 ">Login
         <i class="fa-solid fa-user-astronaut ml-3"></i>
       </a>
       <span class="relative ml-3 mt-8 md:mt-0 cursor-pointer">
@@ -47,6 +47,7 @@
   
   </div>
 </header>
+
 
 <!-- hero section -->
   
