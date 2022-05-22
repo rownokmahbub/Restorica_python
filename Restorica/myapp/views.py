@@ -1,5 +1,7 @@
-from django.shortcuts import render
 
+from multiprocessing import context
+from django.shortcuts import redirect,render
+from myapp.models import Signup
 # Create your views here.
 
 def index(request):
@@ -12,4 +14,17 @@ def table(request):
 def login(request):
     return render( request, 'myapp/login.html')  
 def signup(request):
-    return render( request, 'myapp/signup.html')   
+  if request.method == "POST":
+      name= request.POST.get('name')
+      email=request.POST.get('email')
+      phone=request.POST.get('phone')
+      password=request.POST.get('password')
+      sign=Signup(
+          name=name,
+          email=email,
+          phone=phone,
+          password=password,
+      )
+      sign.save()
+      return redirect('login')
+  return render( request, 'myapp/signup.html')   
