@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
   <link href="./dist/output.css" rel="stylesheet">
     <title>Taiwlijfie</title>
+    {% tailwind_preload_css %}
     {% tailwind_css %}
 </head>
 <body>
@@ -75,13 +76,13 @@
     <h1 class="sm:text-3xl text-[35px] font-medium text-center title-font mb-4 font-Dancing text-rose-400">Book Table</h1>
     <p class="text-xl leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto font-josefin">Check Availability</p>
   </div>
-  <div class="container px-5 py-5 mx-auto flex justify-around flex-wrap mb-4 md:mb-0">
+  <div class="container mx-auto grid grid-cols-2 mb-4 md:mb-0">
      
-      <div class="md:w-[45%] w-full bg-gray-100 rounded-xl  p-4 h-full shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
+      <div class=" bg-gray-100 rounded-xl  p-4 h-auto shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
         <p class="text-2xl mb-2  underline font-medium ml-10">Couple Table</p>
         <div class="flex space-x-7">
      
-          <img class="w-56 h-auto rounded-lg" src="{% static './img/table-1.jpg' %}" alt="">
+          <img class=" h-auto rounded-lg" src="{% static './img/table-1.jpg' %}" style="width: 224px;" alt="">
          <div class="block ">
           <div class="flex flex-col">
             <span class=" font-normal text-xl">Total Table</span>
@@ -116,11 +117,11 @@
       </div>
        
      
-      <div class="md:w-[45%] w-full bg-gray-100 rounded-xl  p-4 h-full shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
+      <div class=" bg-gray-100 rounded-xl  p-4 h-auto shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
         <p class="text-2xl mb-2  underline font-medium ml-10">Single Table</p>
         <div class="flex space-x-7">
      
-          <img class="w-56 h-auto rounded-lg" src="{% static './img/table-2.png' %}" alt="">
+          <img class=" h-auto rounded-lg" src="{% static './img/table-2.png' %}" style="width: 224px;" alt="">
          <div class="block ">
           <div class="flex flex-col">
             <span class=" font-normal text-xl">Total Table</span>
@@ -158,9 +159,9 @@
 
   </div>
 
-  <div class="container px-5 py-5 mx-auto flex justify-around flex-wrap mb-4 md:mb-0">
+ 
      
-    <div class="md:w-[45%] w-full bg-gray-100 rounded-xl  p-4 h-full shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
+    <div class=" bg-gray-100 rounded-xl  p-4 h-auto shadow-cla-violate drop-shadow-md z-10 mb-5 md:mb-0">
       <p class="text-2xl mb-2  underline font-medium ml-10">Corporate Table</p>
       <div class="flex space-x-7">
    
@@ -239,7 +240,7 @@
 
 
 
-</div>
+
 
 <div class="container px-5 py-5 mx-auto flex justify-around flex-wrap mb-4 md:mb-0">
      
@@ -439,5 +440,7 @@
   </footer>
 
 <script src="https://unpkg.com/flowbite@1.4.2/dist/flowbite.js"></script>
+{% block content%}
+{%endblock%}
 </body>
 </html>
