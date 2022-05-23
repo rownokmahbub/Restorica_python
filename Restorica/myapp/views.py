@@ -13,6 +13,12 @@ def table(request):
     return render(request, 'myapp/tablebook.html')
 def login(request):
     return render( request, 'myapp/login.html')  
+def selecttable(request):
+    return render( request, 'myapp/selecttable.html')  
+def userprofile(request):
+    return render( request, 'myapp/userprofile.html') 
+def admindashboard(request):
+    return render( request, 'myapp/admindashboard.html')     
 def signup(request):
   if request.method == "POST":
       name= request.POST.get('name')

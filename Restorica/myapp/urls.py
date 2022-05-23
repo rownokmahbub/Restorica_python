@@ -6,6 +6,9 @@ urlpatterns = [
     path('table',views.table, name='table'),
     path('login',views.login, name='login'),
     path('signup',views.signup, name='signup'),
+    path('selecttable',views.selecttable, name='selecttable'),
+    path('userprofile',views.userprofile, name='userprofile'),
+    path('admindashboard',views.admindashboard, name='admindashboard'),
   
     
 
